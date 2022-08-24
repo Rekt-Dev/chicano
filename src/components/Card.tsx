@@ -34,12 +34,8 @@ export let Card = (props: any) => {
           onClick={() => navigate(`opencard`, { state: {artWork:item} })}
           
         >
-             {
-      state: {
-        userId: id,
-      }
-    });
-  };
+     
+
          
           <img
             onError={({ currentTarget }) => {
