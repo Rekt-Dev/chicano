@@ -22,8 +22,8 @@ export default function App() {
 
           <div className="">
             <div className={"loader-containe flexrow center ofearz"}>
-              {jsonData.data
-                ? jsonData.data.map((artWork, index) => (
+              {jsonData
+                ? jsonData.map((artWork, index) => (
                     <Card key={index} item={artWork} />
                   ))
                 : "No data to show"}

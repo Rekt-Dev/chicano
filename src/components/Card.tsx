@@ -2,7 +2,7 @@
 import { useNavigate, Link } from "react-router-dom";
 //import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
-  function truncate(str) {
+  function truncate(str:string) {
     if (str) {
       return str.length > 17 ? str.substring(0, 13) + "..." : str;
     }
