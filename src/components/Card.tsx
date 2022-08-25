@@ -5,7 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 export let Card = (props: any) => {
   function truncate(str:string) {
     if (str) {
-      return str.length > 17 ? str.substring(0, 13) + "..." : str;
+      return str.length > 16 ? str.substring(0, 13) + "..." : str;
     }
   }
 
