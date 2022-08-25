@@ -39,7 +39,7 @@ export let Card = (props: any) => {
       <div>
         <div
           className="card"
-          onClick={() => goToCardPage}
+          onClick={() => {goToCardPage}}
           
         >
      
