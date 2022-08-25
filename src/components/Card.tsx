@@ -1,4 +1,5 @@
 //import { Redirect } from "./Redirect";
+import { PageItem } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 //import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
@@ -26,12 +27,19 @@ export let Card = (props: any) => {
   };
 
   const navigate = useNavigate();
+  const goToCardPage = (artwork: string) => {
+    navigate('/OpenCard', {
+      state: {
+        item: artwork
+      }
+    });
+  };
   return (
     <div>
       <div>
         <div
           className="card"
-          onClick={() => navigate(`opencard`, { state: {artWork:item} })}
+          onClick={() => goToCardPage}
           
         >
      
