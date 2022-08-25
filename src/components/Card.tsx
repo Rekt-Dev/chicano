@@ -1,10 +1,11 @@
 //import { Redirect } from "./Redirect";
+import { PageItem } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 //import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
-  function truncate(str) {
+  function truncate(str:string) {
     if (str) {
-      return str.length > 17 ? str.substring(0, 13) + "..." : str;
+      return str.length > 16 ? str.substring(0, 13) + "..." : str;
     }
   }
 
@@ -26,13 +27,24 @@ export let Card = (props: any) => {
   };
 
   const navigate = useNavigate();
+  const goToCardPage = (artwork: string) => {
+    navigate('/OpenCard', {
+      state: {
+        item: artwork
+      }
+    });
+  };
   return (
     <div>
       <div>
         <div
           className="card"
-          onClick={() => navigate(`opencard`, { state: artWork })}
+          onClick={() => {goToCardPage}}
+          
         >
+     
+
+         
           <img
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
