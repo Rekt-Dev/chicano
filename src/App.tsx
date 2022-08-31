@@ -20,9 +20,9 @@ export default function App() {
         <div className="divider">
           <Header search={getData} />
 
-          <div className="">
-            <div className={"loader-containe flexrow center ofearz"}>
-              {jsonData.data
+          <div>
+            <div className={"flexrow center ofearz"}>
+              {jsonData
                 ? jsonData.data.map((artWork, index) => (
                     <Card key={index} item={artWork} />
                   ))
