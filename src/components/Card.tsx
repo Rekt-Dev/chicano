@@ -1,4 +1,3 @@
-//import { Redirect } from "./Redirect";
 import { useNavigate, Link } from "react-router-dom";
 //import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
@@ -31,7 +30,11 @@ export let Card = (props: any) => {
       <div>
         <div
           className="card"
-          onClick={() => navigate(`opencard`)}
+          onClick={() => navigate(`OpenCard`, {
+            state: {
+              src:`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg` 
+            }
+          })}
         >
           <img
             onError={({ currentTarget }) => {
