@@ -31,7 +31,7 @@ export let Card = (props: any) => {
       <div>
         <div
           className="card"
-          onClick={() => navigate(`opencard`, { state: artWork })}
+          onClick={() => navigate(`opencard`)}
         >
           <img
             onError={({ currentTarget }) => {
