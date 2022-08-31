@@ -23,7 +23,7 @@ export default function App() {
           <div>
             <div className={"flexrow center ofearz"}>
               {jsonData.data
-                ? jsonData.data.map((artWork, index) => (
+                ? jsonData.data.map((artWork:any, index:any) => (
                     <Card key={index} item={artWork} />
                   ))
                 : "No data to show"}
