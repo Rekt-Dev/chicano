@@ -11,7 +11,7 @@ export function OpenCard(props: any) {
       <div>
         <img
           alt="love"
-          src={props.src}
+          src={props.imgSrc}
        / >
       </div>
     </div>

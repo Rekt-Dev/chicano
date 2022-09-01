@@ -31,9 +31,9 @@ export let Card = (props: any) => {
        
         <div
           className="card"
-          onClick={(src) => navigate(`/opencard`, {
+          onClick={(props) => navigate(`/opencard`, {
             state: {
-              src:`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg` 
+              imgSrc:`https://image.shutterstock.com/image-photo/example-word-written-on-wooden-260nw-1765482248.jpg` 
             }
           })}
         >
