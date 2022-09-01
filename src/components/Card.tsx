@@ -28,9 +28,10 @@ export let Card = (props: any) => {
   return (
     <div>
       <div>
+       
         <div
           className="card"
-          onClick={() => navigate(`OpenCard`, {
+          onClick={() => navigate(`/opencard`, {
             state: {
               src:`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg` 
             }
@@ -75,3 +76,22 @@ export let Card = (props: any) => {
     </div>
   );
 };
+
+
+
+/* - public
+   |- images
+       |- image.jpg
+
+
+
+You can structure your components as such:
+
+const App = () => (
+    <ProjectCard image="image.jpg" />
+);
+const ProjectCard = (props) => (
+    <div>
+        <img src={`images/${props.image}`} />
+    </div>
+); */
