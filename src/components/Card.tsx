@@ -23,17 +23,20 @@ export let Card = (props: any) => {
   let goToArtist = () => {
     console.log(`go2artist invoked`);
   };
-
+  let image=props.item.image_id
   const navigate = useNavigate();
   return (
     <div>
       <div>
-       
+       <div>
+        {image}
+       </div>
         <div
           className="card"
-          onClick={(state) => navigate(`/opencard`, {
+          onClick={() => navigate(`/opencard`,
+           {
             state: {
-              src:`https://image.shutterstock.com/image-photo/example-word-written-on-wooden-260nw-1765482248.jpg` 
+              src:{image}
             }
           })}
         >
