@@ -1,6 +1,8 @@
 import { useNavigate, Link } from "react-router-dom";
 //import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
+  let image=props.item.image_id
+
   function truncate(str:string) {
     if (str) {
       return str.length > 17 ? str.substring(0, 13) + "..." : str;
@@ -23,7 +25,6 @@ export let Card = (props: any) => {
   let goToArtist = () => {
     console.log(`go2artist invoked`);
   };
-  let image=props.item.image_id
   const navigate = useNavigate();
   return (
     <div>
@@ -33,7 +34,7 @@ export let Card = (props: any) => {
        </div>
         <div
           className="card"
-          onClick={() => navigate(`/opencard`,
+          onClick={(props) => navigate(`/opencard`,
            {
             state: {
               src:{image}
