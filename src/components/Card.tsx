@@ -37,7 +37,7 @@ export let Card = (props: any) => {
           onClick={(props) => navigate(`/opencard`,
            {
             state: {
-              src:{image}
+              src:{}
             }
           })}
         >
