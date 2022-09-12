@@ -21,7 +21,7 @@ export default function App() {
           <Header search={getData} />
 
           <div>
-            <div className={"flexrow center ofearz"}>
+            <div className={"center ofearz"}>
               {jsonData.data
                 ? jsonData.data.map((artWork:any, index:number) => (
                     <Card key={index} item={artWork} />
