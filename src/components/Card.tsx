@@ -9,6 +9,10 @@ export let Card = (props: any) => {
     }
   }
 
+  const navigateToOpencard = (imageId:any) => {
+    navigate("/opencard", { state: { imageId: imageId } });
+  };
+ 
   function dataOrDefault() {
     const defaultLink =
       "https://www.artic.edu/iiif/2/d68a3f34-411d-efd4-154e-48b9c565b125/full/843,/0/default.jpg";
@@ -32,12 +36,13 @@ export let Card = (props: any) => {
        <div>
         {image}
        </div>
+       
         <div
           className="card"
-          onClick={(props) => navigate(`/opencard`,
+          onClick={() => navigate(`/opencard`,
            {
             state: {
-              src:{}
+             
             }
           })}
         >
@@ -58,7 +63,7 @@ export let Card = (props: any) => {
           <p
             title={props.item.title}
             className={"truncate alignLeft"}
-            onClick={() => navigate(`opencard`,{state:{src:props.data.image_id}})}
+            onClick={() => navigate(`opencard`,{state:{src:props.item.image_id}})}
           >
             Title: {truncate(props.item.title) || "Artist name"}
           </p>
