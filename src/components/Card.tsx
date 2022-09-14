@@ -10,7 +10,7 @@ export let Card = (props: any) => {
   }
 
   const navigateToOpencard = (imageId:any) => {
-    navigate("/opencard", { state: { imageId: imageId } });
+    navigate("/opencard", { state: { src: `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg` } });
   };
  
   function dataOrDefault() {
@@ -39,12 +39,7 @@ export let Card = (props: any) => {
        
         <div
           className="card"
-          onClick={() => navigate(`/opencard`,
-           {
-            state: {
-             
-            }
-          })}
+          onClick={() => navigateToOpencard }
         >
           <img
             onError={({ currentTarget }) => {

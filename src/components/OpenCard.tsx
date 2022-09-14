@@ -12,7 +12,7 @@ export function OpenCard(props: any) {
       <div>
         <img
           alt="fihk me "
-          src={props.imageId}
+          src={`https://www.artic.edu/iiif/2/${props.imageId}/full/843,/0/default.jpg`}
        / >
       </div>
     </div>
