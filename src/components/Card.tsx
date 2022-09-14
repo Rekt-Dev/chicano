@@ -63,7 +63,7 @@ export let Card = (props: any) => {
           <p
             title={props.item.title}
             className={"truncate alignLeft"}
-            onClick={() => navigate(`opencard`,{state:{src:props.item.image_id}})}
+            onClick={() => {navigateToOpencard(`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`)}}
           >
             Title: {truncate(props.item.title) || "Artist name"}
           </p>
