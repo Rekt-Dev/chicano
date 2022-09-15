@@ -39,7 +39,7 @@ export let Card = (props: any) => {
        
         <div
           className="card"
-          onClick={() => navigateToOpencard }
+          onClick={() => navigateToOpencard(imageId) }
         >
           <img
             onError={({ currentTarget }) => {
