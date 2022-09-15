@@ -1,7 +1,7 @@
 import { useNavigate, Link } from "react-router-dom";
 //import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
-  let image=props.item.image_id
+  let imageId=props.item.image_id
 
   function truncate(str:string) {
     if (str) {
@@ -34,7 +34,7 @@ export let Card = (props: any) => {
     <div>
       <div>
        <div>
-        {image}
+        {imageId}
        </div>
        
         <div
