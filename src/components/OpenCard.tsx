@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"; */
 
 
 
-export function OpenCard(imageId:any) {
+export function OpenCard({src}) {
 
   return (
     <div>
@@ -12,7 +12,7 @@ export function OpenCard(imageId:any) {
       <div>
         <img
           alt="fihk me "
-          src={`https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`}
+          src={`https://www.artic.edu/iiif/2/${src.imageId}/full/843,/0/default.jpg`}
        / >
       </div>
     </div>
