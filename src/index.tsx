@@ -17,7 +17,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="gotoartist" element={<GoToArtist />} />
-        <Route path="opencard" element={<OpenCard />} />
+        <Route path="OpenCard" element={<OpenCard />} />
         <Route path="hovercard" element={<HoverCard />} />
       </Routes>
     </Router>

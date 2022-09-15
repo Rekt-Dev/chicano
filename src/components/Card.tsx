@@ -1,7 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 //import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
-  let imageId=props.item.image_id
 
   function truncate(str:string) {
     if (str) {
@@ -12,6 +11,16 @@ export let Card = (props: any) => {
   const navigateToOpencard = (imageId:any) => {
     navigate("/opencard", { state: { src: {imageId} } });
   };
+
+  const navToOpenCard = (imageId: any) => {
+    navigate('/OpenCard', {
+      state: {
+        imageId: imageId,
+      }
+    });
+  };
+  let imageId=props.item.image_id
+
  
   function dataOrDefault() {
     const defaultLink =
@@ -28,8 +37,11 @@ export let Card = (props: any) => {
   //let constructedLink = imageStartLink + artworkId + imageEndLink;
   let goToArtist = () => {
     console.log(`go2artist invoked`);
+
+
   };
   const navigate = useNavigate();
+
   return (
     <div>
       <div>
@@ -39,7 +51,7 @@ export let Card = (props: any) => {
        
         <div
           className="card"
-          onClick={() => navigateToOpencard(imageId) }
+          onClick={() => navToOpenCard(imageId) }
         >
           <img
             onError={({ currentTarget }) => {
@@ -58,7 +70,7 @@ export let Card = (props: any) => {
           <p
             title={props.item.title}
             className={"truncate alignLeft"}
-            onClick={() => {navigateToOpencard(`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`)}}
+            onClick={() => {navigateToOpencard(imageId)}}
           >
             Title: {truncate(props.item.title) || "Artist name"}
           </p>
