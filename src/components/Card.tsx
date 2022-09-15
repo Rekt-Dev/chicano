@@ -10,7 +10,7 @@ export let Card = (props: any) => {
   }
 
   const navigateToOpencard = (imageId:any) => {
-    navigate("/opencard", { state: { src: `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg` } });
+    navigate("/opencard", { state: { src: {imageId} } });
   };
  
   function dataOrDefault() {
