@@ -1,10 +1,10 @@
 /* import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom"; */
+import React from "react";
 
 
 
-
-export function OpenCard({src}) {
+export function OpenCard({imageId}) {
 
   return (
     <div>
@@ -12,7 +12,7 @@ export function OpenCard({src}) {
       <div>
         <img
           alt="fihk me "
-          src={`https://www.artic.edu/iiif/2/${src.imageId}/full/843,/0/default.jpg`}
+          src={`https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`}
        / >
       </div>
     </div>

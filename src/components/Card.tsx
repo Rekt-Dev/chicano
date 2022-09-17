@@ -1,4 +1,5 @@
 import { useNavigate, Link } from "react-router-dom";
+import {useState} from "react"
 //import Image from "react-bootstrap/Image";
 export let Card = (props: any) => {
 
@@ -9,17 +10,10 @@ export let Card = (props: any) => {
   }
 
   const navigateToOpencard = (imageId:any) => {
-    navigate("/opencard", { state: { src: {imageId} } });
+    navigate("/opencard", { state: { imageId: imageId } });
   };
 
-  const navToOpenCard = (imageId: any) => {
-    navigate('/OpenCard', {
-      state: {
-        imageId: imageId,
-      }
-    });
-  };
-  let imageId=props.item.image_id
+
 
  
   function dataOrDefault() {
@@ -35,12 +29,15 @@ export let Card = (props: any) => {
 
   //const artworkId = props.item.image_id;
   //let constructedLink = imageStartLink + artworkId + imageEndLink;
+  let imageId=props.item.image_id
+
   let goToArtist = () => {
     console.log(`go2artist invoked`);
 
 
   };
   const navigate = useNavigate();
+  let imgSrc=`https://www.artic.edu/iiif/2/${props.item.image_id}/full/843,/0/default.jpg`
 
   return (
     <div>
@@ -51,7 +48,7 @@ export let Card = (props: any) => {
        
         <div
           className="card"
-          onClick={() => navToOpenCard(imageId) }
+          onClick={() => navigateToOpencard({imageId}) }
         >
           <img
             onError={({ currentTarget }) => {
